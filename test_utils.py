@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from assignment7.utils import format_as_chat
+from utils import format_as_chat
 
 
 class UtilsTestCase(TestCase):
