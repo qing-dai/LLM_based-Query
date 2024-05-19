@@ -18,7 +18,7 @@ With the `request body` set as
   "inputs": "Howdy!",
   "parameters": {
     "do_sample": false,
-    "max_new_tokens": 20
+    "max_new_tokens": 40
   }
 }`
 we can switch the query into mode of "greedy decoding". If input 
@@ -28,16 +28,14 @@ we can switch the query into mode of "greedy decoding". If input
 
 the output is: 
 
-`I'm a software engineer with a passion for building scalable and maintainable systems. I've worked on`
-
+` I'm a software engineer with a passion for building scalable and maintainable systems. I've worked on a variety of projects, from mobile apps to web applications, and I'm always looking for new challenges`
 ---
 
 **Formatting the prompt as an instruction**
 
-`output1: [{'generated_text': "Howdy! I'm a software engineer with a passion for building scalable and maintainable systems. I've worked on"}]
+`output1: {'generated_text': " I'm a software engineer with a passion for building scalable and maintainable systems. I've worked on a variety of projects, from mobile apps to web applications, and I'm always looking for new challenges"}
+output2: {'generated_text': 'assistant\n\nHowdy back atcha! What brings you to these here parts?'}`
 
-output2: [{'generated_text': '<|begin_of_text|><|start_header_id|>user<|end_header_id|>\nHowdy!<|eot_id|>assistant\n\nHowdy back atcha! What brings you to these here parts?'}]
-`
 
 **1. Observation:**
 
@@ -47,6 +45,4 @@ Unlike the first output, which is more general.
 
 **2. Call the API with the concatenated prompt and log the conversation below.**
 
-`"<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nHowdy!<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\nHowdy back atcha! What brings you to these here parts?<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nMy assignments!<|eot_id|>assistant\n\nWell, shucks! I'm happy to help you tackle those assignments! What"`
-
-
+`'generated_text': "assistant\n\nWell, shucks! I'm happy to help you tackle those assignments! What kind of assignments do you have? Are they related to a specific subject or topic? Let me know"}`
