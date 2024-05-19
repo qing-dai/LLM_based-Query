@@ -1,4 +1,4 @@
-Utilizing the Meta Llama 3 Instruct with 8 billion parameters from hugging face to create
+Utilizing the Meta Llama 3 Instruct with 8 billion parameters from hugging face to build
 
 **1. a machine translation chatbot**
 
